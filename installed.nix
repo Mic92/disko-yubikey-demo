@@ -16,7 +16,7 @@
 
   boot.initrd.systemd.enable = true;
   boot.initrd.luks.devices.crypted.crypttabExtraOpts = [ "fido2-device=auto" ];
-  users.users.root.initialPassword = "toor";
+  users.extraUsers.root.initialHashedPassword = "";
 
   disko.devices = {
     disk = {
