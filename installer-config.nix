@@ -28,6 +28,7 @@
     pkgs.vim
     pkgs.cryptsetup
     (pkgs.writeShellScriptBin "do-install" ''
+      set -euxo pipefail
       ${pkgs.disko}/bin/disko-install --debug --flake ${./.}#installed --disk somedisk /dev/vdb
       poweroff
     '')
